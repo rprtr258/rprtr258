@@ -1,6 +1,5 @@
 ### Hi there 👋
 
-<!--
 **rprtr258/rprtr258** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -13,4 +12,11 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<h1>Some HTML PogChamp</h1>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
