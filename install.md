@@ -6,6 +6,8 @@
 
 [PDF Reader](https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=733)
 
+[OBS](https://obsproject.com/ru)
+
 [Opera GX](https://www.opera.com/gx)
 - [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
