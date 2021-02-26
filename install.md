@@ -33,4 +33,6 @@ git config --global core.autocrlf true
 
 [Insomnia](https://insomnia.rest/download/)
 
+[Deluge](https://deluge-torrent.org/)
+
 [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
