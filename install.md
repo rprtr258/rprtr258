@@ -30,3 +30,5 @@ git config --global core.autocrlf true
 - [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
 - [BTTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped)
+
+[Insomnia](https://insomnia.rest/download/)
