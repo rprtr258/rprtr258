@@ -8,6 +8,9 @@
 
 [OBS](https://obsproject.com/ru)
 
+[emacs](https://www.gnu.org/software/emacs/)
+- [spacemacs](https://www.spacemacs.org/)
+
 [Opera GX](https://www.opera.com/gx)
 - [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
