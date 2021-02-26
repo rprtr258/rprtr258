@@ -16,6 +16,10 @@ git config --global core.autocrlf false
 [emacs](https://www.gnu.org/software/emacs/)
 - [spacemacs](https://www.spacemacs.org/)
 
+```bash
+git config --global core.autocrlf true
+```
+
 [Opera GX](https://www.opera.com/gx)
 - [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
