@@ -32,3 +32,5 @@ git config --global core.autocrlf true
 - [BTTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped)
 
 [Insomnia](https://insomnia.rest/download/)
+
+[qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
