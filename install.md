@@ -8,6 +8,11 @@
 
 [OBS](https://obsproject.com/ru)
 
+[git](https://git-scm.com/download/win)
+```bash
+git config --global core.autocrlf false
+```
+
 [emacs](https://www.gnu.org/software/emacs/)
 - [spacemacs](https://www.spacemacs.org/)
 
