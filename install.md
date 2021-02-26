@@ -12,7 +12,9 @@
 ```bash
 git config --global core.autocrlf false
 ```
+
 [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?preview.text_type=custom)
+
 [emacs](https://www.gnu.org/software/emacs/)
 - [spacemacs](https://www.spacemacs.org/)
 - add to `init.el`
