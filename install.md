@@ -5,3 +5,4 @@
 [Opera GX](https://www.opera.com/gx)
 - [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
+- [BTTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped)
