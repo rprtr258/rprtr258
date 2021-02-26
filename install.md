@@ -1,3 +1,4 @@
 [WACUP](https://getwacup.com/preview/)
 
-[VkOpt](https://vkopt.net/download/)
+[Opera GX](https://www.opera.com/gx)
+- [VkOpt](https://vkopt.net/download/)
