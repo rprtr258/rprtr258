@@ -15,6 +15,10 @@ git config --global core.autocrlf false
 [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?preview.text_type=custom)
 [emacs](https://www.gnu.org/software/emacs/)
 - [spacemacs](https://www.spacemacs.org/)
+- add to `init.el`
+```elisp
+(setq shell-file-name "C:/Program Files/Git/bin/bash.exe")
+```
 
 ```bash
 git config --global core.autocrlf true
