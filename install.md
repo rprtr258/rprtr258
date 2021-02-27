@@ -7,6 +7,8 @@
 [PDF Reader](https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=733)
 
 [OBS](https://obsproject.com/ru)
+- [Chatterino](https://chatterino.com/)
+- [Twitch Soundtrack](https://www.twitch.tv/broadcast/soundtrack)
 
 [git](https://git-scm.com/download/win)
 ```bash
