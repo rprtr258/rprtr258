@@ -44,7 +44,11 @@ git config --global core.autocrlf true
 
 [Deluge](https://deluge-torrent.org/)
 
-[qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
+[chocolatey](https://chocolatey.org/install)
+- [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
+```bash
+choco install qutebrowser
+```
 
 [cmder](https://cmder.net/)
 
