@@ -47,3 +47,5 @@ git config --global core.autocrlf true
 [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
 
 [cmder](https://cmder.net/)
+
+[Python 3](https://www.python.org/downloads/release/python-392/)
