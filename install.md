@@ -25,7 +25,7 @@ git config --global core.autocrlf false
 ```
 
 ```bash
-git config --global core.autocrlf true
+git config --global core.autocrlf input
 
 ssh-keygen -t ed25519
 eval `ssh-agent -s`
