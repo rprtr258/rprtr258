@@ -26,6 +26,12 @@ git config --global core.autocrlf false
 
 ```bash
 git config --global core.autocrlf true
+
+ssh-keygen -t ed25519
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_ed25519
+clip < ~/.ssh/id_ed25519.pub
+# add key to github ssh keys
 ```
 
 [Opera GX](https://www.opera.com/gx)
