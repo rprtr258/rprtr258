@@ -39,7 +39,7 @@ git config --global core.autocrlf true
 - [Web Go Board](https://chrome.google.com/webstore/detail/web-go-board/cdmhoehokaoghadonjfdbhieajggfbmd/related)(pin)
 - [YouTube NonStop](https://chrome.google.com/webstore/detail/youtube-nonstop/nlkaejimjacpillmajjnopmpbkbnocid)
 - [Numbered Tabs](https://chrome.google.com/webstore/detail/numbered-tabs/iocebdgkllilbhbekghlbpmhfeejgcgi)
-- [Ears: Bass Boost, EQ Any Audio!](https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=ru)
+- [Ears: Bass Boost, EQ Any Audio!](https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=ru)(pin)
 
 [Insomnia](https://insomnia.rest/download/)
 
