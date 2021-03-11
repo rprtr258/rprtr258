@@ -2,6 +2,8 @@
 
 [ShareX](https://getsharex.com/)
 
+[MEGA Sync](https://mega.nz/sync)
+
 [Steam](https://store.steampowered.com/about/Steam?l=russian)
 
 [PDF Reader](https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=733)
