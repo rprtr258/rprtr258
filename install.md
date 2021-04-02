@@ -14,6 +14,7 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 [Steam](https://store.steampowered.com/about/Steam?l=russian)
 
 [PDF Reader](https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=733)
+[WinDJVU](https://sourceforge.net/projects/windjview/files/latest/download)
 
 [OBS](https://obsproject.com/ru)
 - [Chatterino](https://chatterino.com/)
