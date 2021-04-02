@@ -25,6 +25,8 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 git config --global core.autocrlf false
 ```
 
+[Terminus](https://github.com/Eugeny/terminus)
+
 [ngrok](https://ngrok.com/download)
 
 [Notepad++](https://notepad-plus-plus.org/downloads/)
