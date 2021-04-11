@@ -6,7 +6,6 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 ```
 
 [WACUP](https://getwacup.com/preview/)
-[Terminus](https://github.com/Eugeny/terminus)
 [ShareX](https://getsharex.com/)
 
 [MEGA Sync](https://mega.nz/sync)
