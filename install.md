@@ -61,6 +61,7 @@ clip < ~/.ssh/id_ed25519.pub
 - [YouTube NonStop](https://chrome.google.com/webstore/detail/youtube-nonstop/nlkaejimjacpillmajjnopmpbkbnocid)
 - [Numbered Tabs](https://chrome.google.com/webstore/detail/numbered-tabs/iocebdgkllilbhbekghlbpmhfeejgcgi)
 - [Ears: Bass Boost, EQ Any Audio!](https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=ru)(pin)
+- [SessionBox](https://sessionbox.io)(pin)
 - [YouTube To Mp3 Converter](https://addoncrop.com/youtube-mp3-converter/)
 - [bypass paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
 - [SkyLoad](https://chrome.google.com/webstore/detail/skyload-music-and-video-d/kmjjckahdlkcknbgpkdmmobhchpedlck?hl=ru)
