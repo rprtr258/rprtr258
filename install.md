@@ -25,6 +25,7 @@ git config --global core.autocrlf false
 ```
 
 [Terminus](https://github.com/Eugeny/terminus)
+[MobaXTerm](https://mobaxterm.mobatek.net/)
 
 [ngrok](https://ngrok.com/download)
 
