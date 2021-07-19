@@ -73,8 +73,9 @@ clip < ~/.ssh/id_ed25519.pub
 
 [chocolatey](https://chocolatey.org/install)
 - [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
+- [neovim](https://neovim.io/)
 ```bash
-choco install qutebrowser
+choco install -y qutebrowser neovim
 ```
 
 [cmder](https://cmder.net/)
