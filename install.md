@@ -75,7 +75,7 @@ clip < ~/.ssh/id_ed25519.pub
 - [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
 - [neovim](https://neovim.io/)
 ```bash
-choco install -y qutebrowser neovim
+choco install -y qutebrowser neovim cmder
 ```
 install vim-plug
 ```powershell
