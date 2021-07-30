@@ -88,6 +88,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   )
 )
 ```
+Open nvim and run `:PlugInstall`
 
 [cmder](https://cmder.net/)
 
