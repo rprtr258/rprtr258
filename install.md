@@ -7,7 +7,7 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 
 [WACUP](https://getwacup.com/preview/)
 [ShareX](https://getsharex.com/)
-
+[Listary](https://www.listary.com)
 [MEGA Sync](https://mega.nz/sync)
 
 [Steam](https://store.steampowered.com/about/Steam?l=russian)
@@ -24,7 +24,7 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 git config --global core.autocrlf false
 ```
 
-[Terminus](https://github.com/Eugeny/terminus)
+[Cmder](https://cmder.net)
 [MobaXTerm](https://mobaxterm.mobatek.net/)
 
 [ngrok](https://ngrok.com/download)
