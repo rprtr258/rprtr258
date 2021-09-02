@@ -16,3 +16,5 @@ USER="\u"
 HOSTNAME="\h"
 export PS1="$USER@$HOSTNAME: \[\e[32m\]\$(nice_cwd) [\$?]\[\e[91m\]\$(parse_git_branch)\[\e[00m\]\\$\[$(tput sgr0)\] "
 alias dirs="dirs -v"
+alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+
