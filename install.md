@@ -96,14 +96,7 @@ Open nvim and run `:PlugInstall`
 
 ## Search engines
 
-Clojure docs
-
-cl
-
-https://clojuredocs.org/clojure.core/%s
-
-Go docs
-
-go
-
-https://pkg.go.dev/search?q=%s
+|Name|Keyword|URL|
+|-|-|-|
+|Clojure docs|cl|https://clojuredocs.org/clojure.core/%s|
+|Go docs|go|https://pkg.go.dev/search?q=%s|
