@@ -93,3 +93,17 @@ Open nvim and run `:PlugInstall`
 [cmder](https://cmder.net/)
 
 [Python 3](https://www.python.org/downloads/release/python-392/)
+
+## Search engines
+
+Clojure docs
+
+cl
+
+https://clojuredocs.org/clojure.core/%s
+
+Go docs
+
+go
+
+https://pkg.go.dev/search?q=%s
