@@ -7,4 +7,4 @@ While listening to witch house and dreaming of anime girls I:
 - 📺 [stream](https://www.twitch.tv/rprtr258)
 - ✉ [tweet without using twitter](https://vk.com/rprtr258)
 - 🕹 [play computer games](https://steamcommunity.com/id/rprtr258)
-- 🤔 thinking of ways to improve my _life_
+- 🤔 thinking of ways to improve my l̶̼̘͌̀ͅͅî̴̡̝̻͇̊̒́͂́̓f̸̧̥̘͇͚́̅͒̀̃e̵͈̲͕̽̀͝
