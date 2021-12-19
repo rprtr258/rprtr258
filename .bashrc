@@ -18,3 +18,7 @@ export PS1="$USER@$HOSTNAME: \[\e[32m\]\$(nice_cwd) [\$?]\[\e[91m\]\$(parse_git_
 alias dirs="dirs -v"
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 
+
+# >>>> Vagrant command completion (start)
+. C:/HashiCorp/Vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
