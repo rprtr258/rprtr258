@@ -22,3 +22,6 @@ alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs gi
 # >>>> Vagrant command completion (start)
 . C:/HashiCorp/Vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/bash/completion.sh
 # <<<<  Vagrant command completion (end)
+
+# ln ~/AppData/Local/nvim/init.vim ~/init.vim
+alias vim=nvim-qt
