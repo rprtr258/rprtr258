@@ -96,7 +96,15 @@ Open nvim and run `:PlugInstall`
 
 ## Search engines
 
-|Name|Keyword|URL|
-|-|-|-|
-|Clojure docs|cl|https://clojuredocs.org/clojure.core/%s|
-|Go docs|go|https://pkg.go.dev/search?q=%s|
+KeePassXC
+sqlite3
+task
+clip,multi clipboard
+opera gx/pale moon/firefox/vivaldi
+spotify
+winamp
+discord
+telegram
+recursed,vangers
+termux
+vscode
