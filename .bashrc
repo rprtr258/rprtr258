@@ -71,6 +71,7 @@ function prompt_command {
     OFF="\[\033[m\]"
 
     branch=$(git symbolic-ref HEAD 2> /dev/null | sed -e 's?refs/heads/??g')
+    changes=$(git status -s 2> /dev/null | wc -l | sed -e 's/ *//')
     if [ ${changes} -eq 0 ]; then
       dirty=""
     else
@@ -79,8 +80,6 @@ function prompt_command {
     if [ ${branch} ]; then
         branch="${RED}(${branch}${OFF}${RED}${dirty})${OFF}"
     fi
-    changes=`git status -s 2> /dev/null | \
-             wc -l | sed -e 's/ *//'`
 
     if [ ${exitstatus} -eq 0 ]; then
       EXITCOLOR="${WHITE}"
@@ -92,8 +91,8 @@ function prompt_command {
     #PS1="$GREEN$USER@$HOSTNAME$WHITE:$BLUE\w$RED\$(parse_git_branch)$WHITE[\$?]$PROMPT"
     PS2="${BOLD}>${OFF} "
     
-    dir=`pwd`
-    title=`basename ${dir}`
+    dir=$(pwd)
+    title=$(basename ${dir})
     echo -n -e "\033]0;${title}\007"
 }
 
