@@ -88,7 +88,6 @@ function prompt_command {
     fi
 
     PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${branch}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
-    #PS1="$GREEN$USER@$HOSTNAME$WHITE:$BLUE\w$RED\$(parse_git_branch)$WHITE[\$?]$PROMPT"
     PS2="${BOLD}>${OFF} "
     
     dir=$(pwd)
