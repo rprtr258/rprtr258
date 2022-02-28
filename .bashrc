@@ -52,26 +52,52 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+function prompt_command {
+    exitstatus="$?"
+    USER="\u"
+    HOSTNAME="\h"
+    PROMPT='\n\$ '
+
+    BOLD="\[\033[1m\]"
+    RED='\[\e[91m\]'
+    #RED="\[\033[1;31m\]"
+    GREEN='\[\033[01;32m\]'
+    #GREEN="\[\e[32;1m\]"
+    BLUE='\[\033[01;34m\]'
+    #BLUE="\[\e[34;1m\]"
+    PURPLE="\[\e[35;1m\]"
+    CYAN="\[\e[36;1m\]"
+    WHITE='\[\033[00m\]'
+    OFF="\[\033[m\]"
+
+    branch=$(git symbolic-ref HEAD 2> /dev/null | sed -e 's?refs/heads/??g')
+    if [ ${changes} -eq 0 ]; then
+      dirty=""
+    else
+      dirty="*"
+    fi
+    if [ ${branch} ]; then
+        branch="${RED}(${branch}${OFF}${RED}${dirty})${OFF}"
+    fi
+    changes=`git status -s 2> /dev/null | \
+             wc -l | sed -e 's/ *//'`
+
+    if [ ${exitstatus} -eq 0 ]; then
+      EXITCOLOR="${WHITE}"
+    else
+      EXITCOLOR="${RED}"
+    fi
+
+    PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${branch}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
+    #PS1="$GREEN$USER@$HOSTNAME$WHITE:$BLUE\w$RED\$(parse_git_branch)$WHITE[\$?]$PROMPT"
+    PS2="${BOLD}>${OFF} "
+    
+    dir=`pwd`
+    title=`basename ${dir}`
+    echo -n -e "\033]0;${title}\007"
 }
 
-USER="\u"
-HOSTNAME="\h"
-
-HZCHTO='${debian_chroot:+($debian_chroot)}'
-PROMPT='\n\$ '
-
-GREEN='\[\033[01;32m\]'
-WHITE='\[\033[00m\]'
-BLUE='\[\033[01;34m\]'
-RED='\[\e[91m\]'
-if [ "$color_prompt" = yes ]; then
-    PS1="$HZCHTO$GREEN$USER@$HOSTNAME$WHITE:$BLUE\w$RED\$(parse_git_branch)$WHITE[\$?]$PROMPT"
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n$ '
-fi
-unset color_prompt force_color_prompt
+PROMPT_COMMAND=prompt_command
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -118,3 +144,4 @@ fi
 alias clip='xclip -selection clipboard'
 # wal -i /mnt/hdd/MEGA/picz/wallpapers/desktop-saturn.jpg 2>&1 >/dev/null
 
+. "$HOME/.cargo/env"
