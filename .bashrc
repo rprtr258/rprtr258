@@ -91,7 +91,7 @@ function prompt_command {
     PS2="${BOLD}>${OFF} "
     
     dir=$(pwd)
-    title=$(basename ${dir})
+    title=$(basename "${dir}")
     echo -n -e "\033]0;${title}\007"
 }
 
