@@ -78,7 +78,7 @@ function prompt_command {
       dirty="*"
     fi
     if [ ${branch} ]; then
-        branch="${RED}(${branch}${OFF}${RED}${dirty})${OFF}"
+        branch="(${branch}${OFF}${RED}${dirty})"
     fi
 
     if [ ${exitstatus} -eq 0 ]; then
@@ -87,7 +87,7 @@ function prompt_command {
       EXITCOLOR="${RED}"
     fi
 
-    PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${branch}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
+    PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
     PS2="${BOLD}>${OFF} "
     
     dir=$(pwd)
