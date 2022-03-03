@@ -30,8 +30,9 @@ echo 'set completion-ignore-case On' | sudo tee -a /etc/inputrc
 # sudo shutdown -h now
 
 # telegram
-sudo ln /home/rprtr258/bin/Telegram/Telegram /usr/bin/tg -s
-# telegram-desktop 2>/dev/null &
+wget https://telegram.org/dl/desktop/linux
+sudo tar xJf linux -C /opt/
+sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
 
 # git
 sudo apt install git
