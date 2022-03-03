@@ -124,6 +124,9 @@ alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs gi
 alias ll='ls -lA'
 alias la='ls -A'
 alias l='ls -CF'
+alias clip='xclip -selection clipboard'
+alias mv='mv -i'
+alias gs='git status'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -136,9 +139,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias clip='xclip -selection clipboard'
-alias mv='mv -i'
-alias gs='git status'
 # wal -i /mnt/hdd/MEGA/picz/wallpapers/desktop-saturn.jpg 2>&1 >/dev/null
+ssh-add ~/.ssh/github 2>/dev/null
 
 . "$HOME/.cargo/env"
