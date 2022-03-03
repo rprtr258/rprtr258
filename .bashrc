@@ -60,11 +60,8 @@ function prompt_command {
 
     BOLD="\[\033[1m\]"
     RED='\[\e[91m\]'
-    #RED="\[\033[1;31m\]"
     GREEN='\[\033[01;32m\]'
-    #GREEN="\[\e[32;1m\]"
     BLUE='\[\033[01;34m\]'
-    #BLUE="\[\e[34;1m\]"
     PURPLE="\[\e[35;1m\]"
     CYAN="\[\e[36;1m\]"
     WHITE='\[\033[00m\]'
@@ -78,7 +75,7 @@ function prompt_command {
       dirty="*"
     fi
     if [ ${branch} ]; then
-        branch="(${branch}${OFF}${RED}${dirty})"
+        branch="(${branch}${dirty})"
     fi
 
     if [ ${exitstatus} -eq 0 ]; then
