@@ -52,7 +52,8 @@ source ~/.config/nvim/strawberry/colors/strawberry-dark.vim
 " colorscheme strawberry-dark
 
 " call nerdtree
-nnoremap <leader>e :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<CR>
 
 " switch between panes
 nnoremap <leader>h :wincmd h<CR>
