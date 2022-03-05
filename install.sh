@@ -29,6 +29,16 @@ echo 'set completion-ignore-case On' | sudo tee -a /etc/inputrc
 # setxkbmap -layout us,ru -option grp:alt_shift_toggle -option ctrl:nocaps
 # sudo shutdown -h now
 
+# alacritty
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+cargo build --release
+sudo ln target/release/alacritty /usr/local/bin
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+
 # telegram
 wget https://telegram.org/dl/desktop/linux
 sudo tar xJf linux -C /opt/
