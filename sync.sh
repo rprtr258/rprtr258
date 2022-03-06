@@ -1,4 +1,7 @@
-cp -r ~/.config/polybar/* ~/GTD/reference/linux_config/.config/polybar
-cp ~/.config/i3/* ~/GTD/reference/linux_config/.config/i3
-cp ~/.config/nvim/init.vim ~/GTD/reference/linux_config/.config/nvim/
-cp ~/.bashrc ~/GTD/reference/linux_config/
+pushd ~/GTD/reference/linux_config/
+cp -r ~/.config/rofi/* .config/rofi/
+cp ~/.config/polybar/* .config/polybar/
+cp ~/.config/i3/* .config/i3/
+cp ~/.config/nvim/init.vim .config/nvim/
+cp ~/.bashrc .
+popd
