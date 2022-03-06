@@ -16,7 +16,7 @@ map <Space> <Leader>
 
 call plug#begin("~/.config/nvim")
 Plug 'vim-scripts/RltvNmbr.vim'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
 Plug 'nvim-lua/plenary.nvim'
@@ -24,21 +24,13 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nightsense/strawberry'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'zchee/deoplete-jedi'
-" Plug 'davidhalter/jedi-vim'
 Plug 'neomake/neomake'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-let g:deoplete#enable_at_startup = 1
 let g:airline_theme='deus'
-" let g:jedi#completions_enabled = 0 " disable autocompletion, because we use deoplete for completion
-" let g:jedi#use_splits_not_buffers = "right" " open the go-to function in split, not another buffer
-" let g:jedi#goto_command = "gd"
-" let g:jedi#documentation_command = "gh"
 
 let g:neomake_python_enabled_makers = ['pylint']
 call neomake#configure#automake('nrwi', 500)
