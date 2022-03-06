@@ -7,4 +7,9 @@ configuration {
     hide-scrollbar: true;
     scroll-method: 1;
     cycle: true;
+    font: "Iosevka Nerd Font 10";
+    show-icons: true;
+    icon-theme: "Papirus";
+    disable-history: false;
+    fullscreen: false;
 }
