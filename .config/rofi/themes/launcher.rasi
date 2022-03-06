@@ -61,13 +61,15 @@ mainbox {
 }
 
 mode-switcher {
-  spacing: -1px;
+  spacing: 0px;
   background-color: inherit;
   text-color: inherit;
+  border: 1px 2px 1px 1px;
+  border-color: @ac;
 }
 
 button {
-  border: 1px;
+  border: 0px 0px 0px 1px;
   border-color: @ac;
   background-color: inherit;
   text-color: @fg;
