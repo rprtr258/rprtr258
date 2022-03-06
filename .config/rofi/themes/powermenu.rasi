@@ -1,3 +1,12 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
 configuration {
 	font:							"Iosevka Nerd Font 10";
     show-icons:                     true;
@@ -8,7 +17,6 @@ configuration {
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
-    scroll-method:                  1;
 }
 
 @import "colors.rasi"
@@ -20,7 +28,7 @@ window {
 	border:							0px 0px 0px 0px;
 	border-color:					@ac;
     border-radius:                  0px;
-	width:							800px;
+	width:							350px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -28,9 +36,17 @@ window {
 
 prompt {
     enabled: 						true;
+	padding: 						0px 0px 0px 10px;
+	background-color: 				@bga;
+	text-color: 					@fg;
+}
+
+textbox-prompt-colon {
 	padding: 						0px;
 	background-color: 				@bga;
 	text-color: 					@ac;
+	expand: false;
+	str: "";
 	font:							"feather 12";
 }
 
@@ -46,7 +62,7 @@ entry {
 }
 
 inputbar {
-	children: 						[ prompt, entry ];
+	children: 						[ textbox-prompt-colon, prompt ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
@@ -61,8 +77,8 @@ listview {
     background-color:               @al;
     padding:                        0px;
     columns:                        1;
-    lines:                          10;
-    spacing:                        0px;
+    lines:                          5;
+    spacing:                        5px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
@@ -74,7 +90,7 @@ mainbox {
     border-radius:                  0px;
 	border-color:					@ac;
     children:                       [ inputbar, listview ];
-    spacing:                       	0px;
+    spacing:                       	5px;
     padding:                        5px;
 }
 
@@ -83,7 +99,7 @@ element {
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						3px;
+	padding: 						8px 8px 8px -10px;
 }
 
 element-icon {
@@ -100,7 +116,7 @@ element-text {
 
 element selected {
     background-color:               @se;
-    text-color:                     @fg;
+    text-color:                     @bg;
 	border:							0px 0px 0px 0px;
     border-radius:                  0px;
     border-color:                  	@ac;

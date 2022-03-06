@@ -1,0 +1,10 @@
+configuration {
+    modi: [combi,window,drun,run,ssh];
+    combi-modi: [window,drun,run,ssh];
+    width: 60;
+    lines: 20;
+    sidebar-mode: true;
+    hide-scrollbar: true;
+    scroll-method: 1;
+    cycle: true;
+}
