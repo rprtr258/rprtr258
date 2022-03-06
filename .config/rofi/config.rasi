@@ -1,6 +1,6 @@
 configuration {
-    modi: [combi,window,drun,run,ssh];
-    combi-modi: [window,drun,run,ssh];
+    modi: [combi,drun,window,run,ssh];
+    combi-modi: [drun,window,run,ssh];
     width: 60;
     lines: 20;
     sidebar-mode: true;
