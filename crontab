@@ -1,1 +1,1 @@
-* * * * * (cd ~/GTD/; git add reference/linux_config; git commit -m "Autoupdate linux config submodule")
+* * * * * (cd ~/GTD/; git add reference/linux_config; git commit -m "Autoupdate linux config submodule"; cd reference/linux_config; git push)
