@@ -1,1 +1,2 @@
-* * * * * (cd ~/GTD/; git add reference/linux_config; git commit -m "Autoupdate linux config submodule"; cd reference/linux_config; git push)
+30 * * * * (cd ~/GTD/; git add reference/linux_config; git commit -m "Autoupdate linux config submodule"; cd reference/linux_config; git push)
+0,5,10,15,20,25,30,35,40,45,50,55 * * * * sudo updatedb --localpaths="/mnt/hdd /home/rprtr258" --prunepaths="/home/rprtr258/.local"
