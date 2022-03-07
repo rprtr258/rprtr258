@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-dir="rofi"
+dir="$(dirname $0)"
 uptime=$(uptime -p | sed -e 's/up //g')
 
-rofi_command="rofi -theme $(dirname $0)/.rasi"
+rofi_command="rofi -theme $dir/.rasi"
 
 # Options
 shutdown=" Shutdown"
@@ -18,12 +18,12 @@ confirm_exit() {
 		-i\
 		-no-fixed-num-lines\
 		-p "Are You Sure? : "\
-		-theme $dir/confirm.rasi
+		-theme $dir/../themes/confirm.rasi
 }
 
 # Message
 msg() {
-	rofi -theme "$dir/message.rasi" -e "Available Options  -  yes / y / no / n"
+	rofi -theme "$dir/../themes/message.rasi" -e "Available Options  -  yes / y / no / n"
 }
 
 # Variable passed to rofi
