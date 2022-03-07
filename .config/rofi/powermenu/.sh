@@ -3,7 +3,7 @@
 dir="rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
-rofi_command="rofi -theme $dir/powermenu.rasi"
+rofi_command="rofi -theme $(dirname $0)/.rasi"
 
 # Options
 shutdown=" Shutdown"

@@ -1,6 +1,14 @@
 configuration {
-    modi: [combi,drun,window,run,ssh];
-    combi-modi: [drun,window,run,ssh];
+    modi: [
+        combi,
+        drun,
+        window,
+        run,
+        ssh,
+        "files:~/.config/rofi/file_browser/.sh",
+        "locate:~/.config/rofi/locate/.sh"
+    ];
+    combi-modi: [drun,window,run,locate]; // TODO: remove run
     width: 60;
     lines: 20;
     sidebar-mode: true;

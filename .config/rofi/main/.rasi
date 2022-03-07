@@ -1,4 +1,4 @@
-@import "colors.rasi"
+@import "../themes/colors.rasi"
 
 window {
   transparency: "real";
