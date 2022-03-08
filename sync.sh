@@ -7,8 +7,8 @@ pushd ~/GTD/reference/linux_config/
     mkdir .config/nvim/
 
     # copy actual configs
-    cp -r ~/.config/{rofi,polybar,i3}/ .config/
+    cp -r ~/.config/{rofi,polybar,i3,alacritty}/ .config/
     cp ~/.config/nvim/init.vim .config/nvim/
-    cp ~/.{bashrc,xinitrc} .
+    cp ~/.{bashrc,xinitrc,bash_colors} .
     sudo cat /var/spool/cron/crontabs/rprtr258 | rg -v '^# |^$' > crontab
 popd
