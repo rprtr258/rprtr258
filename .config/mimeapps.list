@@ -10,9 +10,11 @@ image/png=org.gnome.eog.desktop
 image/jpeg=org.gnome.eog.desktop
 image/gif=org.gnome.eog.desktop
 
+text/plain=vim.desktop
+text/markdown=vim.desktop
+
 x-scheme-handler/tg=userapp-Telegram Desktop-F6OWI1.desktop
 application/pdf=org.gnome.Evince.desktop;
-text/plain=vim.desktop
 
 [Added Associations]
 
