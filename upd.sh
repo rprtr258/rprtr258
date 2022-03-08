@@ -1,6 +1,6 @@
-ssh-add ~/.ssh/github
+ssh-add /home/rprtr258/.ssh/github
 if [ "$(gs | wc -l)" != "4" ]; then
-    cd ~/GTD/reference/linux_config
+    cd /home/rprtr258/GTD/reference/linux_config
     git push
     cd ../
     git add linux_config
