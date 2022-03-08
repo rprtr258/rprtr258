@@ -126,8 +126,16 @@ alias l='ls -CF'
 alias clip='xclip -selection clipboard'
 alias mv='mv -i'
 alias gs='git status'
-alias gd='git diff'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+
+function gd {
+    DIFF=$(git diff --cached --color=always)
+    if [ "$DIFF" ]; then
+        echo -e "$DIFF"
+    else
+        git diff
+    fi
+}
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
