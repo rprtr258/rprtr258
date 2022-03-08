@@ -2,9 +2,10 @@
 
 # TODO: sudo updatedb regularly
 if [ -n "$@" ] && [ "$@" != "\n" ]; then
-    coproc open "$@" >/dev/null
+    res=$(echo "$@" | sed 's/~/\/home\/rprtr258/' | sed 's/#/\/mnt\/hdd/')
+    coproc open "$res" >/dev/null
     exit 0
 else
-    locate /home/ /mnt/hdd/ | rg -v '/(\.git|\.cargo|\.local|\.cpan|\.cache|\.task|\.wine|\.rustup|venv)/'
+    cat /home/rprtr258/.config/rofi/locate/db
 fi
 
