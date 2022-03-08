@@ -7,5 +7,6 @@ if [ "$(git status | wc -l)" != "4" ]; then
     git stash
         git add linux_config
         git commit -m "Autoupdate linux config submodule"
+    git stash pop
 fi
 
