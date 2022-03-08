@@ -1,2 +1,2 @@
-30 * * * * /home/rprtr258/GTD/reference/linux_config/upd.sh
+* * * * * /home/rprtr258/GTD/reference/linux_config/upd.sh
 0,5,10,15,20,25,30,35,40,45,50,55 * * * * updatedb --localpaths="/mnt/hdd /home/rprtr258" && locate /home/rprtr258/ /mnt/hdd | rg -v '/(\.git|\.cargo|\.local|\.cpan|\.cache|\.task|\.wine|\.rustup|venv)/' | gawk 'match($0, /\/home\/rprtr258\/(.*)/, a) {print "~/"a[1]} match($0, /\/mnt\/hdd\/(.*)/, a) {print "#/"a[1]}' > /home/rprtr258/.config/rofi/locate/db

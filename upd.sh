@@ -1,7 +1,7 @@
 ssh-add /home/rprtr258/.ssh/github
 if [ "$(git status | wc -l)" != "4" ]; then
     cd /home/rprtr258/GTD/reference/linux_config
-    git push
+    git push 2>&1 >> /home/rprtr258/f
     cd ../
     git add linux_config
     git commit -m "Autoupdate linux config submodule"
