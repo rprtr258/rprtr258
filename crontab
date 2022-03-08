@@ -1,2 +1,2 @@
-30 * * * * (ssh-add ~/.ssh/github; cd ~/GTD/reference/linux_config; git push; cd ../; git add linux_config; git commit -m "Autoupdate linux config submodule")
+30 * * * * ~/GTD/reference/linux_config/upd.sh
 0,5,10,15,20,25,30,35,40,45,50,55 * * * * sudo updatedb --localpaths="/mnt/hdd /home/rprtr258" --prunepaths="/home/rprtr258/.local"
