@@ -1,2 +1,2 @@
-30 * * * * ~/GTD/reference/linux_config/upd.sh
+30 * * * * /home/rprtr258/GTD/reference/linux_config/upd.sh
 0,5,10,15,20,25,30,35,40,45,50,55 * * * * updatedb --localpaths="/mnt/hdd /home/rprtr258" --prunepaths="/mnt/hdd/$RECYCLE.BIN"

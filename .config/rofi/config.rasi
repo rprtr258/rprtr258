@@ -20,4 +20,5 @@ configuration {
     icon-theme: "Papirus";
     disable-history: false;
     fullscreen: false;
+    sort: true;
 }

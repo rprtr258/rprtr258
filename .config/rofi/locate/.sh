@@ -5,6 +5,6 @@ if [ -n "$@" ] && [ "$@" != "\n" ]; then
     coproc open "$@" >/dev/null
     exit 0
 else
-    locate /home/ /mnt/hdd/ | rg -v '/(\.git|\.cargo|\.local|\.cpan|\.cache|\.task|\.wine|venv)/'
+    locate /home/ /mnt/hdd/ | rg -v '/(\.git|\.cargo|\.local|\.cpan|\.cache|\.task|\.wine|\.rustup|venv)/'
 fi
 
