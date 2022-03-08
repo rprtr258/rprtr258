@@ -11,5 +11,5 @@ pushd ~/GTD/reference/linux_config/
     cp -r ~/.config/mimeapps.list .config/
     cp ~/.config/nvim/init.vim .config/nvim/
     cp ~/.{bashrc,xinitrc,bash_colors} .
-    sudo cat /var/spool/cron/crontabs/root | rg -v '^# |^$' > crontab
+    sudo crontab -l | rg -v '^# |^$' > crontab
 popd
