@@ -182,3 +182,4 @@ bar {
 }
 
 for_window [class="^.*"] border pixel 0
+for_window [class="__focused__"] border pixel 3

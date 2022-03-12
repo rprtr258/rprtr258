@@ -154,3 +154,5 @@ ssh-add ~/.ssh/github 2>/dev/null
 . "$HOME/.cargo/env"
 eval $(dircolors -b ~/.bash_colors)
 
+export PATH=$PATH:/usr/local/go/bin
+
