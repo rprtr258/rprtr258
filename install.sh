@@ -59,6 +59,7 @@ snap install telegram-desktop
 apt install git
 git config --global user.name "rprtr258"
 git config --global user.email "poletansky@gmail.com"
+git config --global pull.rebase false
 
 ## vivaldi
 sudo apt install fonts-liberation
