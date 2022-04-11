@@ -125,11 +125,18 @@ alias la='ls -AF'
 alias l='ls -CF'
 alias clip='xclip -selection clipboard'
 alias mv='mv -i'
+alias cp='cp -i'
 alias gs='git status'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+alias pass="keepassxc-cli clip /mnt/hdd/keepass/passwords.kdbx -k /mnt/hdd/keepass/pass_db.key --no-password"
+alias vim="io.neovim.nvim 2>/dev/null"
+function mnthdd {
+    D=$(lsblk --fs | rg ntfs | cut -c7-10)
+    sudo mount "/dev/$D" /mnt/hdd
+}
 
 function gd {
-    DIFF=$(git diff --cached --color=always)
+    DIFF=$(git diff --cached)
     if [ "$DIFF" ]; then
         echo -e "$DIFF"
     else
@@ -155,4 +162,6 @@ ssh-add ~/.ssh/github 2>/dev/null
 eval $(dircolors -b ~/.bash_colors)
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
+export PATH=$PATH:/var/lib/flatpak/exports/bin/
 
