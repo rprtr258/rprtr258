@@ -7,7 +7,9 @@ sudo apt install ripgrep i3 keepassxc polybar cargo rofi polybar curl htop pragh
 adduser rprtr258 sudo
 
 ## neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+sudo ln /usr/local/bin/nvim /usr/local/bin/vim -s
+# TODO: instead build and install from source
+#curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 curl -fLo .nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 wget https://raw.githubusercontent.com/rprtr258/rprtr258/master/config/nvim/init.vim
 ln /home/rprtr258/nvim.appimage /usr/bin/vim -s
@@ -15,6 +17,7 @@ ln /home/rprtr258/nvim.appimage /usr/bin/vim -s
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim —create-dirs \
 # https://raw.githubusercontent.com/junegunn/vim-plug/m..'
 # :PlugInstall # TODO: from command line
+# TODO: :checkhealth
 
 ## i3
 apt install i3 feh imagemagick rofi networkmanager_dmenu

@@ -100,7 +100,7 @@ KeePassXC
 sqlite3
 task
 clip,multi clipboard
-opera gx/pale moon/firefox/vivaldi
+opera gx/pale moon/firefox
 spotify
 winamp
 discord
