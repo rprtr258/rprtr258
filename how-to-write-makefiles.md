@@ -26,7 +26,7 @@ precommit: # run precommit checks
 
 .PHONY: todo
 todo: # show list of all todos left in code
-	rg 'TODO' --glob '**/*.go'
+	@rg 'TODO' --glob '**/*.go' || echo 'All done!'
 ```
 
 - every rule that does not compiles/downloads files must be prefixed by `.PHONY: rule`
