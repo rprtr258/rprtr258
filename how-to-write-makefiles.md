@@ -60,3 +60,8 @@ run-count:
 ```makefile
 	@echo 'something important is happening now...'
 ```
+- frequently used commands should be aliased, e.g.
+```makefile
+DOCKER_COMPOSE:=docker compose -f .deploy/docker-compose.yml
+VKUTILS:=go run main.go --token $(shell cat .env)
+```
