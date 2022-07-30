@@ -58,7 +58,7 @@ run-count:
 ```
 - echo calls must be prefixed with `@`, e.g.
 ```makefile
-	@echo 'something important is happening now...'
+@echo 'something important is happening now...'
 ```
 - frequently used commands should be aliased, e.g.
 ```makefile
