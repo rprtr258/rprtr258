@@ -43,10 +43,15 @@ rule: # this does something
   - `precommit` usually just runs `$(MAKE) lint`, then `$(MAKE) test`
   - `todo` show list of `// TODO: something` like comments
   - `build` build executable
-- vars definitions are put into beginning of the file
+- vars definitions are put into beginning of the file or rule-specific
   - `VAR:=VALUE` set value once
   - `VAR?=VALUE` vars that can be changed through env vars or `make rule VAR=ANOTHER_VALUE` command
   - `VAR=VALUE` vars are evaluated on usage, use for shell commands that might need to be rerunned
+- dotenv files are included like so:
+```makefile
+include .env
+export
+```
 - particular cases (e.g. `run`ning different targets) commands for different purposes are named as `$(PARENT)-$(COMAND)`, e.g.
 ```makefile
 run-reposts:
