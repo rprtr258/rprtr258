@@ -43,19 +43,6 @@ precommit: lint test audit
 @install:
     go install ./cmd/app/
 
-# install templating tool
-@_tools-mustpl:
-    curl -SsL -o ./mustpl https://github.com/tarampampam/mustpl/releases/latest/download/mustpl-linux-amd64
-    chmod +x ./mustpl
-    sudo install -g root -o root -t /usr/local/bin -v ./mustpl
-    rm ./mustpl
-
-USAGE := `go run cmd/fimgs/fimgs.go --help`
-EXAMPLES := `echo 'some examples'`
-# compile readme file from template
-@readme _tools-mustpl:
-    mustpl -d '{"usage": "{{USAGE}}", "examples": "{{EXAMPLES}}"}' img/README.md.tpl > README.md
-
 # run postgres cli
 @psql:
     docker exec -ti postgres psql
@@ -111,3 +98,4 @@ VKUTILS:=rwenv -ie .env go run main.go
 ```
 - use `set dotenv-load` at the beginning of file to use env vars from `.env` file
 - [swagger generates examples](https://github.com/moby/moby/blob/master/hack/generate-swagger-api.sh)
+- [templating readme example](https://github.com/rprtr258/fimgs)
