@@ -1,52 +1,75 @@
 boilerplate to copy and use:
 ```makefile
 @_help:
-	just --list --unsorted
+    just --list --unsorted
+
+# check that executable is installed and accessible
+@_tool-exists cmd:
+    command -v {{cmd}} || echo '{{cmd}} is not installed'
 
 # run app
 @run:
-	go run cmd/app/app.go
+    go run cmd/app/app.go
 
 # run unit tests
 @test:
-	go test ./...
+    go test ./...
+
+# run tests and open coverage in browser
+@coverage:
+    go test -v -coverprofile=cover.out -covermode=atomic .
+    go tool cover -html=cover.out
 
 # run linter
 @lint:
-	golangci-lint run --exclude-use-default=false --disable-all \
-		--enable=revive --enable=deadcode --enable=errcheck --enable=govet --enable=ineffassign --enable=structcheck --enable=typecheck --enable=varcheck --enable=asciicheck --enable=bidichk --enable=bodyclose --enable=containedctx --enable=contextcheck --enable=cyclop --enable=decorder --enable=depguard --enable=dogsled --enable=dupl --enable=durationcheck --enable=errchkjson --enable=errname --enable=errorlint --enable=execinquery --enable=exhaustive --enable=exhaustruct --enable=exportloopref --enable=forbidigo --enable=forcetypeassert --enable=funlen --enable=gochecknoglobals --enable=gochecknoinits --enable=gocognit --enable=goconst --enable=gocritic --enable=gocyclo --enable=godot --enable=godox --enable=goerr113 --enable=gofmt --enable=gofumpt --enable=goimports --enable=gomnd \
-		--enable=gomoddirectives --enable=gomodguard --enable=goprintffuncname --enable=gosec --enable=grouper --enable=ifshort --enable=importas --enable=lll --enable=maintidx --enable=makezero --enable=misspell --enable=nestif --enable=nilerr --enable=nilnil --enable=noctx --enable=nolintlint --enable=nosprintfhostport --enable=paralleltest --enable=prealloc --enable=predeclared --enable=promlinter --enable=rowserrcheck --enable=sqlclosecheck --enable=tenv --enable=testpackage --enable=thelper --enable=tparallel --enable=unconvert --enable=unparam --enable=wastedassign --enable=whitespace --enable=wrapcheck
+    go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+    golangci-lint run --exclude-use-default=false --disable-all \
+        --enable=revive --enable=deadcode --enable=errcheck --enable=govet --enable=ineffassign --enable=structcheck --enable=typecheck --enable=varcheck --enable=asciicheck --enable=bidichk --enable=bodyclose --enable=containedctx --enable=contextcheck --enable=cyclop --enable=decorder --enable=depguard --enable=dogsled --enable=dupl --enable=durationcheck --enable=errchkjson --enable=errname --enable=errorlint --enable=execinquery --enable=exhaustive --enable=exhaustruct --enable=exportloopref --enable=forbidigo --enable=forcetypeassert --enable=funlen --enable=gochecknoglobals --enable=gochecknoinits --enable=gocognit --enable=goconst --enable=gocritic --enable=gocyclo --enable=godot --enable=godox --enable=goerr113 --enable=gofmt --enable=gofumpt --enable=goimports --enable=gomnd \
+        --enable=gomoddirectives --enable=gomodguard --enable=goprintffuncname --enable=gosec --enable=grouper --enable=ifshort --enable=importas --enable=lll --enable=maintidx --enable=makezero --enable=misspell --enable=nestif --enable=nilerr --enable=nilnil --enable=noctx --enable=nolintlint --enable=nosprintfhostport --enable=paralleltest --enable=prealloc --enable=predeclared --enable=promlinter --enable=rowserrcheck --enable=sqlclosecheck --enable=tenv --enable=testpackage --enable=thelper --enable=tparallel --enable=unconvert --enable=unparam --enable=wastedassign --enable=whitespace --enable=wrapcheck
+
+# audit dependencies
+audit: tools
+    go install github.com/sonatype-nexus-community/nancy@latest
+    go list -json -m all | nancy sleuth
 
 # run precommit checks
-precommit: lint test
+precommit: lint test audit
 
 # show list of all todos left in code
-@todo:
-	rg 'TODO' --glob '**/*' || echo 'All done!'
+@todo: (_tool-exists rg)
+    rg 'TODO' --glob '**/*' || echo 'All done!'
 
 # install into GOPATH
 @install:
-	go install ./cmd/app/
+    go install ./cmd/app/
 
 # install templating tool
-_tools-mustpl:
+@_tools-mustpl:
     curl -SsL -o ./mustpl https://github.com/tarampampam/mustpl/releases/latest/download/mustpl-linux-amd64
     chmod +x ./mustpl
     sudo install -g root -o root -t /usr/local/bin -v ./mustpl
     rm ./mustpl
 
-# install dotenv tool
-_tools-rwenv:
-    go install github.com/rprtr258/rwenv
-
-# install development tools
-tools: _tools-mustpl _tools-rwenv
-
 USAGE := `go run cmd/fimgs/fimgs.go --help`
 EXAMPLES := `echo 'some examples'`
 # compile readme file from template
-@readme:
+@readme _tools-mustpl:
     mustpl -d '{"usage": "{{USAGE}}", "examples": "{{EXAMPLES}}"}' img/README.md.tpl > README.md
+
+# run postgres cli
+@psql:
+    docker exec -ti postgres psql
+
+ENV_FILE_PARAM := if $(ls .env || true) == ".env" {"--env-file .env"} else {""}
+
+# run dockerized server on specified port
+docker-server port:
+    docker compose up --build --rm -it -p {{port}}:$(PORT) $(ENV_FILE_PARAM)
+
+# list outdated dependencies
+outdated:
+    go install github.com/psampaz/go-mod-outdated@latest
+    go list -u -m -json all | go-mod-outdated -update -direct
 ```
 
 - every command should have docstring like so:
@@ -86,3 +109,5 @@ run-count:
 DOCKER_COMPOSE:=docker compose -f .deploy/docker-compose.yml
 VKUTILS:=rwenv -ie .env go run main.go
 ```
+- use `set dotenv-load` at the beginning of file to use env vars from `.env` file
+- [swagger generates examples](https://github.com/moby/moby/blob/master/hack/generate-swagger-api.sh)
