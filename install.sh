@@ -64,12 +64,6 @@ git config --global user.name "rprtr258"
 git config --global user.email "poletansky@gmail.com"
 git config --global pull.rebase false
 
-## vivaldi
-sudo apt install fonts-liberation
-wget https://downloads.vivaldi.com/stable/vivaldi-stable_5.1.2567.66-1_amd64.deb
-dpkg -i vivaldi-stable_5.1.2567.66-1_amd64.deb
-rm vivaldi-stable_5.1.2567.66-1_amd64.deb
-
 ## obs
 flatpak install flathub com.obsproject.Studio
 
@@ -84,6 +78,10 @@ wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 rm go1.18.linux-amd64.tar.gz
 
-## taskfile
-go install github.com/go-task/task/v3/cmd/task@latest
+## difftastic
+### install cargo
+rustup update
+cargo install difftastic
+
+## unsorted
 
