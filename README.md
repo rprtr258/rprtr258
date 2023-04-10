@@ -7,6 +7,6 @@ While listening to witch house and dreaming of anime girls I:
 - 👁 [rate animes](https://rprtr258.github.io/watch_list.html)
 - 🎵 listen to [witchhouse or phonk or smth other](https://open.spotify.com/user/21xgcujwwcwy3ak5xii4js6hy)
 - 📺 [stream](https://www.twitch.tv/rprtr258)
-- ✉ [tweet without using twitter](https://vk.com/rprtr258)
+- ✉ [tweet without using twitter](https://t.me/rprtr259)
 - 🕹 [play computer games](https://steamcommunity.com/id/rprtr258)
 - 🤔 thinking of ways to improve my l̶̼̘͌̀ͅͅî̴̡̝̻͇̊̒́͂́̓f̸̧̥̘͇͚́̅͒̀̃e̵͈̲͕̽̀͝

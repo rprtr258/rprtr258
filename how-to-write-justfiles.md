@@ -57,6 +57,10 @@ docker-server port:
 outdated:
     go install github.com/psampaz/go-mod-outdated@latest
     go list -u -m -json all | go-mod-outdated -update -direct
+
+doc:
+	@echo GoDoc link: http://localhost:6060/pkg/$(shell head -n1 go.mod | cut -d' ' -f2)
+	godoc -http=:6060
 ```
 
 - every command should have docstring like so:
