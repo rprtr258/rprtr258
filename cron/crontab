@@ -1,3 +1,11 @@
-* 0 * * * /home/rprtr258/GTD/reference/linux_config/upd.sh
-0,5,10,15,20,25,30,35,40,45,50,55 * * * * updatedb --localpaths="/mnt/hdd/music /mnt/picz /home/rprtr258" && locate /home/rprtr258/ /mnt/hdd | rg -v '/(\.git|\.cargo|\.local|\.cpan|\.cache|\.task|\.wine|\.rustup|venv)/' | gawk 'match($0, /\/home\/rprtr258\/(.*)/, a) {print "~/"a[1]} match($0, /\/mnt\/hdd\/(.*)/, a) {print "#/"a[1]}' > /home/rprtr258/.config/rofi/locate/db
-* * * * 0 rm -rf /mnt/hdd/GTD && cp -r /home/rprtr258/GTD /mnt/hdd/
+PATH=/home/rprtr258/.cargo/bin:/home/rprtr258/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin:/home/rprtr258/go/bin
+
+*/5 * * * * ~/pr/cron/justfile run wallpaper
+0 * * * * ~/pr/cron/justfile run env
+* * * * * ~/pr/cron/justfile run monitoring
+0 * * * * ~/pr/cron/justfile run gtd-commit
+
+# update paths
+#* * * * * ~/pr/cron/justfile run update-paths
+0 3 * * * ~/pr/cron/justfile run update-rofi-locate
+
