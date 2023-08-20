@@ -40,7 +40,7 @@ wallpaper:
     #!/usr/bin/env bash
     set -euo pipefail
     export DISPLAY=:0.0
-    WALLPAPERS="$HOME/rprtr258/pics/desktop-wallpapers"
+    WALLPAPERS="$HOME/pr/rprtr258/pics/desktop-wallpapers"
     arr[0]="$WALLPAPERS/saturn.jpg --geometry +0+80"
     arr[1]="$WALLPAPERS/morgenshtern.jpg"
     arr[2]="$WALLPAPERS/2b.png"
