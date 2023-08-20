@@ -1,3 +1,7 @@
+## add user to sudo group
+in `su`:
+`sudo adduser rprtr258 sudo`
+
 # run with sudo
 
 ## install packages

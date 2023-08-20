@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"strings"
@@ -10,22 +10,17 @@ import (
 
 const _url = "https://yandex.ru/lab/yalm"
 
-func main() {
-	if err := run(); err != nil {
-		log.Fatal(err.Error())
-	}
-}
-
 func run() error {
 	resp, err := http.Get(_url)
 	if err != nil {
 		return err
 	}
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
+	defer body.Close()
 
 	if !strings.Contains(string(body), "Балабоба временно не работает") {
 		fmt.Printf("%s status changed\n", _url)
@@ -33,4 +28,10 @@ func run() error {
 	}
 
 	return nil
+}
+
+func main() {
+	if err := run(); err != nil {
+		log.Fatal(err.Error())
+	}
 }
