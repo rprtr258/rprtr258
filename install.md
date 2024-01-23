@@ -24,7 +24,6 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 git config --global core.autocrlf false
 ```
 
-[Cmder](https://cmder.net)
 [MobaXTerm](https://mobaxterm.mobatek.net/)
 
 [ngrok](https://ngrok.com/download)
@@ -75,7 +74,7 @@ clip < ~/.ssh/id_ed25519.pub
 - [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
 - [neovim](https://neovim.io/)
 ```bash
-choco install -y qutebrowser neovim cmder
+choco install -y qutebrowser neovim
 ```
 install vim-plug
 ```powershell
@@ -89,8 +88,6 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 )
 ```
 Open nvim and run `:PlugInstall`
-
-[cmder](https://cmder.net/)
 
 [Python 3](https://www.python.org/downloads/release/python-392/)
 
