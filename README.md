@@ -1,5 +1,3 @@
-[how to write makefiles](./how-to-write-makefiles.md)
-
 While listening to witch house and dreaming of anime girls I:
 
 - 🔭 [sometimes looking for work](https://rprtr258.github.io/cv/)
