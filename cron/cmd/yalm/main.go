@@ -20,7 +20,7 @@ func run() error {
 	if err != nil {
 		return err
 	}
-	defer body.Close()
+	defer resp.Body.Close()
 
 	if !strings.Contains(string(body), "Балабоба временно не работает") {
 		fmt.Printf("%s status changed\n", _url)
