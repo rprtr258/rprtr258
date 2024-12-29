@@ -32,31 +32,48 @@ gtd-commit:
     if [ ! -z "$MESSAGE" ]; then
         git add .
         git commit -m "$MESSAGE" -q
-        ssh-agent bash -c 'ssh-add -q ~/.ssh/github && git push -q'
+        #ssh-agent bash -c 'ssh-add -q ~/.ssh/github && git push -q'
     fi
 
+# update paths db
+@update-paths:
+    updatedb --localpaths="/mnt/hdd/music /mnt/hdd/books /home/rprtr258"
+
+# update rofi locate db
+@update-rofi-locate:
+    locate ~ /etc/ /mnt/hdd/books/ /mnt/hdd/music/ | rg -v '(^/(var|snap|usr)|/(\..*|node_modules)/)' | sed 's/\/home\/rprtr258/~/' | sed 's/\/mnt\/hdd/#/' > ~/.config/rofi/locate/db
+
+# TODO: scan all images
 # change wallpaper
 wallpaper:
     #!/usr/bin/env bash
     set -euo pipefail
     export DISPLAY=:0.0
-    WALLPAPERS="$HOME/pr/rprtr258/pics/desktop-wallpapers"
-    arr[0]="$WALLPAPERS/saturn.jpg --geometry +0+80"
-    arr[1]="$WALLPAPERS/morgenshtern.jpg"
-    arr[2]="$WALLPAPERS/2b.png"
-    arr[3]="$WALLPAPERS/polina.jpg"
-    arr[4]="$WALLPAPERS/zyra.jpg"
-    arr[5]="$WALLPAPERS/bunny_girl.jpg"
+    arr[0]="saturn.jpg --geometry +0+80"
+    arr[1]="morgenshtern.jpg"
+    arr[2]="2b.png"
+    arr[3]="polina.jpg"
+    arr[4]="zyra.jpg"
+    arr[5]="bunny_girl.jpg"
+    arr[6]="hz.jpg"
+    arr[7]="black-widow.jpg"
+    arr[8]="beth.png"
+    arr[9]="beth2.jpg"
+    arr[10]="jinx.jpg"
+    arr[11]="ahri.jpg"
     LEN=${#arr[*]}
     INDEX=$((RANDOM % LEN))
-    feh --no-fehbg --bg-fill ${arr[$INDEX]}
+    WALLPAPERS="/home/rprtr258/pr/rprtr258/pics/desktop-wallpapers"
+    feh --no-fehbg --bg-fill "$WALLPAPERS/${arr[$INDEX]}"
 
 # TODO: fix permissions https://askubuntu.com/questions/612256/how-do-i-allow-a-user-to-only-run-the-apt-get-update-command-with-sudo
 # update packages
 apt-update:
     #!/usr/bin/env bash
     set -euo pipefail
-    apt update -y
-    apt upgrade -y
-    snap update -y
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo snap refresh
     flatpak update --noninteractive >/dev/null
+    go-global-update

@@ -15,12 +15,12 @@ func run() error {
 	if err != nil {
 		return err
 	}
+	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
-	defer body.Close()
 
 	if !strings.Contains(string(body), "Балабоба временно не работает") {
 		fmt.Printf("%s status changed\n", _url)
