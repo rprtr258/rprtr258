@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"net/url"
@@ -36,8 +36,9 @@ func run() error {
 		}
 		return err
 	}
+	defer file.Close()
 
-	content, err := ioutil.ReadAll(file)
+	content, err := io.ReadAll(file)
 	if err != nil {
 		return err
 	}
@@ -79,8 +80,9 @@ func run() error {
 	if err != nil {
 		return err
 	}
+	defer resp.Body.Close()
 
-	if _, err := ioutil.ReadAll(resp.Body); err != nil {
+	if _, err := io.ReadAll(resp.Body); err != nil {
 		return err
 	}
 
