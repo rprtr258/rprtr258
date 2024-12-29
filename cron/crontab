@@ -1,0 +1,11 @@
+PATH=/home/rprtr258/.cargo/bin:/home/rprtr258/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin:/home/rprtr258/go/bin
+
+*/5 * * * * ~/pr/cron/justfile run wallpaper
+0 * * * * ~/pr/cron/justfile run env
+* * * * * ~/pr/cron/justfile run monitoring
+0 * * * * ~/pr/cron/justfile run gtd-commit
+
+# update paths
+#* * * * * ~/pr/cron/justfile run update-paths
+0 3 * * * ~/pr/cron/justfile run update-rofi-locate
+

@@ -1,0 +1,62 @@
+#!/usr/bin/env -S just --justfile
+
+set positional-arguments
+
+@_help:
+    just --list
+
+# run task and log it
+@run task:
+    flock ~/cron/.errors echo {{task}} $(just {{task}} 2>&1 | paste -sd'`' -) >>~/cron/.errors
+
+# run cmd as it was running from cron, use only for testing
+@run-as-cron cmd:
+    /usr/bin/env -i $(cat ~/cron/.cron-env) $@
+
+# send logs to telegram
+@monitoring:
+    rwenv -i -e cmd/monitoring/.env go run cmd/monitoring/main.go
+
+# save cron environment
+@env:
+    env > ~/cron/.cron-env
+
+# TODO: connect to existing ssh-agent or start new
+# commit GTD
+gtd-commit:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd ~/GTD
+    ssh-agent bash -c 'ssh-add -q ~/.ssh/github && git pull -q'
+    MESSAGE=$(git status -s | awk '{print $2}' | paste -sd',')
+    if [ ! -z "$MESSAGE" ]; then
+        git add .
+        git commit -m "$MESSAGE" -q
+        ssh-agent bash -c 'ssh-add -q ~/.ssh/github && git push -q'
+    fi
+
+# change wallpaper
+wallpaper:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    export DISPLAY=:0.0
+    WALLPAPERS="$HOME/pr/rprtr258/pics/desktop-wallpapers"
+    arr[0]="$WALLPAPERS/saturn.jpg --geometry +0+80"
+    arr[1]="$WALLPAPERS/morgenshtern.jpg"
+    arr[2]="$WALLPAPERS/2b.png"
+    arr[3]="$WALLPAPERS/polina.jpg"
+    arr[4]="$WALLPAPERS/zyra.jpg"
+    arr[5]="$WALLPAPERS/bunny_girl.jpg"
+    LEN=${#arr[*]}
+    INDEX=$((RANDOM % LEN))
+    feh --no-fehbg --bg-fill ${arr[$INDEX]}
+
+# TODO: fix permissions https://askubuntu.com/questions/612256/how-do-i-allow-a-user-to-only-run-the-apt-get-update-command-with-sudo
+# update packages
+apt-update:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    apt update -y
+    apt upgrade -y
+    snap update -y
+    flatpak update --noninteractive >/dev/null

@@ -24,7 +24,6 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 git config --global core.autocrlf false
 ```
 
-[Cmder](https://cmder.net)
 [MobaXTerm](https://mobaxterm.mobatek.net/)
 
 [ngrok](https://ngrok.com/download)
@@ -62,10 +61,10 @@ clip < ~/.ssh/id_ed25519.pub
 - [YouTube NonStop](https://chrome.google.com/webstore/detail/youtube-nonstop/nlkaejimjacpillmajjnopmpbkbnocid)
 - [Numbered Tabs](https://chrome.google.com/webstore/detail/numbered-tabs/iocebdgkllilbhbekghlbpmhfeejgcgi)
 - [Ears: Bass Boost, EQ Any Audio!](https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=ru)(pin)
-- [SessionBox](https://sessionbox.io)(pin)
 - [YouTube To Mp3 Converter](https://addoncrop.com/youtube-mp3-converter/)
 - [bypass paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
-- [SkyLoad](https://chrome.google.com/webstore/detail/skyload-music-and-video-d/kmjjckahdlkcknbgpkdmmobhchpedlck?hl=ru)
+- SkyLoad
+- [uMatrix](https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf?hl=ru)
 
 [Insomnia](https://insomnia.rest/download/)
 
@@ -75,7 +74,7 @@ clip < ~/.ssh/id_ed25519.pub
 - [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
 - [neovim](https://neovim.io/)
 ```bash
-choco install -y qutebrowser neovim cmder
+choco install -y qutebrowser neovim
 ```
 install vim-plug
 ```powershell
@@ -90,13 +89,19 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 Open nvim and run `:PlugInstall`
 
-[cmder](https://cmder.net/)
-
 [Python 3](https://www.python.org/downloads/release/python-392/)
 
 ## Search engines
 
-|Name|Keyword|URL|
-|-|-|-|
-|Clojure docs|cl|https://clojuredocs.org/clojure.core/%s|
-|Go docs|go|https://pkg.go.dev/search?q=%s|
+KeePassXC
+sqlite3
+task
+clip,multi clipboard
+opera gx/pale moon/firefox
+spotify
+winamp
+discord
+telegram
+recursed,vangers
+termux
+vscode

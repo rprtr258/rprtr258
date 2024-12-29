@@ -1,0 +1,24 @@
+configuration {
+    modi: [
+        combi,
+        drun,
+        window,
+        ssh,
+        "files:~/.config/rofi/file_browser/.sh",
+        "locate:~/.config/rofi/locate/.sh",
+        "pastes:~/.config/rofi/pastes/.sh"
+    ];
+    combi-modi: [drun,run,locate]; // TODO: remove run
+    width: 60;
+    lines: 20;
+    sidebar-mode: true;
+    hide-scrollbar: true;
+    scroll-method: 1;
+    cycle: true;
+    font: "Iosevka Nerd Font 10";
+    show-icons: true;
+    icon-theme: "Papirus";
+    disable-history: false;
+    fullscreen: false;
+    sort: true;
+}
