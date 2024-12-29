@@ -8,7 +8,6 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 [WACUP](https://getwacup.com/preview/)
 [ShareX](https://getsharex.com/)
 [Listary](https://www.listary.com)
-[MEGA Sync](https://mega.nz/sync)
 
 [Steam](https://store.steampowered.com/about/Steam?l=russian)
 
@@ -16,8 +15,6 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 [WinDJVU](https://sourceforge.net/projects/windjview/files/latest/download)
 
 [OBS](https://obsproject.com/ru)
-- [Chatterino](https://chatterino.com/)
-- [Twitch Soundtrack](https://www.twitch.tv/broadcast/soundtrack)
 
 [git](https://git-scm.com/download/win)
 ```bash
@@ -32,13 +29,6 @@ git config --global core.autocrlf false
 
 [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?preview.text_type=custom)
 
-[emacs](https://www.gnu.org/software/emacs/)
-- [spacemacs](https://www.spacemacs.org/)
-- add to `init.el`
-```elisp
-(setq shell-file-name "C:/Program Files/Git/bin/bash.exe")
-```
-
 ```bash
 git config --global core.autocrlf input
 
@@ -49,8 +39,6 @@ clip < ~/.ssh/id_ed25519.pub
 # add key to github ssh keys
 ```
 
-[Opera GX](https://www.opera.com/gx)
-- [VkOpt](https://vkopt.net/download/)
 - [FrankerFaceZ](https://chrome.google.com/webstore/detail/frankerfacez/fadndhdgpmmaapbmfcknlfgcflmmmieb)
 - [BTTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped)
 - [Hover Zoom+](https://chrome.google.com/webstore/detail/hover-zoom%20/pccckmaobkjjboncdfnnofkonhgpceea?hl=ru)
@@ -61,16 +49,12 @@ clip < ~/.ssh/id_ed25519.pub
 - [YouTube NonStop](https://chrome.google.com/webstore/detail/youtube-nonstop/nlkaejimjacpillmajjnopmpbkbnocid)
 - [Numbered Tabs](https://chrome.google.com/webstore/detail/numbered-tabs/iocebdgkllilbhbekghlbpmhfeejgcgi)
 - [Ears: Bass Boost, EQ Any Audio!](https://chrome.google.com/webstore/detail/ears-bass-boost-eq-any-au/nfdfiepdkbnoanddpianalelglmfooik?hl=ru)(pin)
-- [YouTube To Mp3 Converter](https://addoncrop.com/youtube-mp3-converter/)
-- [bypass paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
-- SkyLoad
 - [uMatrix](https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf?hl=ru)
 
 [Insomnia](https://insomnia.rest/download/)
 
 [Deluge](https://deluge-torrent.org/)
 
-[chocolatey](https://chocolatey.org/install)
 - [qutebrowser](https://qutebrowser.org/doc/install.html#_on_windows)
 - [neovim](https://neovim.io/)
 ```bash
@@ -89,19 +73,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 Open nvim and run `:PlugInstall`
 
-[Python 3](https://www.python.org/downloads/release/python-392/)
-
-## Search engines
-
-KeePassXC
-sqlite3
-task
 clip,multi clipboard
-opera gx/pale moon/firefox
-spotify
-winamp
-discord
+chrome
 telegram
-recursed,vangers
-termux
 vscode

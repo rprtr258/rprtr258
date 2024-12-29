@@ -5,7 +5,7 @@ in `su`:
 # run with sudo
 
 ## install packages
-sudo apt install ripgrep i3 keepassxc polybar cargo rofi polybar curl htop pragha xsel flameshot python3-pip git keepassxc ranger adduser reboot bsdmainutils fdisk curl
+sudo apt install ripgrep i3 polybar cargo rofi polybar curl htop pragha xsel flameshot python3-pip git ranger adduser reboot bsdmainutils fdisk curl
 
 ## access, ability to use sudo
 adduser rprtr258 sudo
@@ -58,16 +58,6 @@ cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 desktop-file-install extra/linux/Alacritty.desktop
 update-desktop-database
 
-## telegram
-apt install snap
-snap install telegram-desktop
-
-## git
-apt install git
-git config --global user.name "rprtr258"
-git config --global user.email "poletansky@gmail.com"
-git config --global pull.rebase false
-
 ## obs
 flatpak install flathub com.obsproject.Studio
 
@@ -77,17 +67,7 @@ mv index.html\?LinkID\=760868 code.deb
 apt install code.deb
 rm code.deb
 
-## go
-wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
-rm go1.18.linux-amd64.tar.gz
-
 ## difftastic
 ### install cargo
 rustup update
 cargo install difftastic
-
-## unsorted
-
-# https://upscayl.github.io/
-
