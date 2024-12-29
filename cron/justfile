@@ -71,9 +71,9 @@ wallpaper:
 apt-update:
     #!/usr/bin/env bash
     set -euo pipefail
-    apt update -y
-    apt upgrade -y
-    apt autoremove -y
-    snap refresh
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo snap refresh
     flatpak update --noninteractive >/dev/null
-    #go-global-update
+    go-global-update
