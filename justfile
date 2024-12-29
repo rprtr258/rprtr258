@@ -2,9 +2,6 @@
 
 set positional-arguments
 
-@_help:
-    just --list
-
 # run task and log it
 @run task:
     flock ~/cron/.errors echo {{task}} $(just {{task}} 2>&1 | paste -sd'`' -) >>~/cron/.errors
